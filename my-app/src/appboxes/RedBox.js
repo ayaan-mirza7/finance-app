@@ -1,12 +1,16 @@
 import React from 'react'
+import { Card, CardContent, Typography } from '@mui/material'
 
-const RedBox = () => {
+const RedBox = ({ amount }) => {
   return (
-    <div>
-     
-        <p style={{paddingTop:"20px",marginLeft:"50px",fontSize:"35px"}}>Expenses</p>
-      
-    </div>
+    <Card sx={{ backgroundColor: 'red', color: 'white', minWidth: 250, minHeight: 175 }} elevation={6}>
+      <CardContent>
+        <Typography variant="h6">Expenses</Typography>
+        <Typography variant="h3" sx={{ mt: 2 }}>
+          -{Number(amount).toFixed(2)}
+        </Typography>
+      </CardContent>
+    </Card>
   )
 }
 
